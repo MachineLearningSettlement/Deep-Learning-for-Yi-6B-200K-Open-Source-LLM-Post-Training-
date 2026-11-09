@@ -363,7 +363,7 @@ class SFTDataset(Dataset):
 
                 else:
 
-                    prompt_ids = prompt_ids[-prompt_budget:]
+                    prompt_ids = prompt_ids[-prompt_budget:] if prompt_budget > 0 else []
 
             # ------------------------------------------------
             # Construct causal language modeling sequence
