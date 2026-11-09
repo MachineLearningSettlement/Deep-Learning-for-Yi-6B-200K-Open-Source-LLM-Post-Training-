@@ -2540,3 +2540,14 @@ def main():
 if __name__ == "__main__":
 
     main()
+
+""""
+N.B: Script Execution 
+
+For post_training_dataset.npz as a dataset (as an example), the execution of data centric pipeline for score aggregation and filtering
+>>> The command is: python dataset_curation/dataset_curator.py --input data/post_training_dataset.npz
+
+"""
+
+
+
