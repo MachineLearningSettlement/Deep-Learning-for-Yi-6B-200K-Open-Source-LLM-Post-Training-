@@ -13,5 +13,4 @@ sentencepiece>=0.1.99
 safetensors>=0.4.0
 protobuf>=4.25.0
 
-# Optional: install this only when enabling 4-bit quantization
-# bitsandbytes>=0.43.0
+
