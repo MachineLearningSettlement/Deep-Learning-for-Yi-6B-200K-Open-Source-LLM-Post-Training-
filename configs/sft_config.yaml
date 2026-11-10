@@ -7,6 +7,7 @@ data:
   dataset: data/raw/narrative_dataset.jsonl
   curated_indices: outputs/dataset_curation/curation/curated_sample_indices.npy
 
+
 output_dir: outputs/sft
 
 sequence:
