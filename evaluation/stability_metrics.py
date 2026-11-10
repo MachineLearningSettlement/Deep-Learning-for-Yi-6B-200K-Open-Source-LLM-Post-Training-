@@ -1,5 +1,6 @@
 """Stability metric for continual-learning evaluation."""
 
+
 import math
 from typing import Optional
 
