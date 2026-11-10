@@ -1671,7 +1671,7 @@ def main():
     parser.add_argument(
         "--model-name-or-path",
         type=str,
-        default="01-ai/Yi-6B-200K"
+        default="./models/Yi-6B-200K"
     )
 
     parser.add_argument(
