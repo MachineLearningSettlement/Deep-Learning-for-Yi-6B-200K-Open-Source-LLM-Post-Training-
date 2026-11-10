@@ -13,7 +13,7 @@ as ZIP archives:
 -   pytorch_model-00002-of-00002
 
 Google Drive folder:
-https://drive.google.com/drive/folders/14YjbrLX_7FHNMCIWnI1SMv4p15byXMP8?usp=sharing
+https://drive.google.com/drive/folders/186Gku_7BBp4SEcv58eHamejCyEjVfWWS?usp=sharing
 
 Download the four archives from Google Drive and extract them into the
 models/Yi-6B-200K/ directory alongside the files available in this
