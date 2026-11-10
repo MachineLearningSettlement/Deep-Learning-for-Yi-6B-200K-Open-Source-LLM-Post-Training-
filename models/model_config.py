@@ -1,5 +1,6 @@
 """Configuration for the pretrained Yi-6B-200K model."""
 
+
 import os
 from dataclasses import dataclass
 from typing import Optional
