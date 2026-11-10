@@ -43,14 +43,10 @@ Deep-Learning-for-Yi-6B-200K-Open-Source-LLM-Post-Training/
 │   │   ├── md5
 │   │   ├── model.safetensors.index.json
 │   │   ├── model-00001-of-00002.safetensors
-│   │   ├── model-00001-of-00002.zip
 │   │   ├── model-00002-of-00002.safetensors
-│   │   ├── model-00002-of-00002.zip
 │   │   ├── pytorch_model.bin.index.json
 │   │   ├── pytorch_model-00001-of-00002.bin
-│   │   ├── pytorch_model-00001-of-00002.zip
 │   │   ├── pytorch_model-00002-of-00002.bin
-│   │   ├── pytorch_model-00002-of-00002.zip
 │   │   ├── README.md
 │   │   ├── tokenizer.json
 │   │   ├── tokenizer.model
