@@ -754,7 +754,7 @@ def parse_args():
         )
     )
 
-    parser.add_argument("--model-name-or-path", type=str, default="01-ai/Yi-6B-200K")
+    parser.add_argument("--model-name-or-path", type=str, default="./models/Yi-6B-200K")
     parser.add_argument("--narrative-train", type=str, required=True)
     parser.add_argument("--retention-train", type=str, required=True)
     parser.add_argument("--narrative-eval", type=str, required=True)
