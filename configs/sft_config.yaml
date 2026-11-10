@@ -1,0 +1,49 @@
+# Configuration defaults matching training/sft_trainer.py.
+
+model:
+  model_name_or_path: 01-ai/Yi-6B-200K
+
+data:
+  dataset: data/raw/narrative_dataset.jsonl
+  curated_indices: outputs/dataset_curation/curation/curated_sample_indices.npy
+
+output_dir: outputs/sft
+
+sequence:
+  max_seq_length: 2048
+  prompt_template: |
+    ### Instruction:
+    {prompt}
+
+    ### Response:
+
+lora:
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+optimization:
+  learning_rate: 0.0002
+  batch_size: 1
+  gradient_accumulation_steps: 16
+  epochs: 3
+  warmup_ratio: 0.03
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  validation_split: 0.1
+  patience: 3
+
+runtime:
+  precision: auto
+  load_in_4bit: false
+  gradient_checkpointing: true
+  device: null
+  seed: 42

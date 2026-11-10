@@ -1,0 +1,59 @@
+# Configuration defaults matching data_preprocessor.py and dataset_curator.py.
+
+preprocessing:
+  input: data/raw/narrative_dataset.jsonl
+  pairs: data/raw/pair_annotations.jsonl
+  output: data/processed/post_training_dataset.npz
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+  batch_size: 16
+  max_seq_length: 256
+  device: null
+  seed: 42
+
+curation:
+  input: data/processed/post_training_dataset.npz
+  output_dir: outputs/dataset_curation
+
+  optimization:
+    learning_rate: 0.001
+    batch_size: 64
+    epochs: 100
+    patience: 10
+    validation_split: 0.2
+    dropout: 0.1
+    seed: 42
+    device: null
+
+  autoencoder:
+    hidden_dims: [512, 256]
+    latent_dim: 64
+    threshold: 0.95
+
+  siamese_network:
+    hidden_dims: [512, 256]
+    embedding_dim: 128
+    similarity_threshold: 0.90
+    margin: 1.0
+
+  variational_autoencoder:
+    hidden_dims: [512, 256]
+    latent_dim: 64
+    beta: 1.0
+    max_diversity_pairs: 100000
+
+  mlp:
+    hidden_dims: [256, 128, 64]
+    dropout: 0.2
+    relevance_threshold: 0.5
+    compatibility_threshold: 0.5
+
+  transformer_encoder:
+    d_model: 256
+    num_heads: 8
+    num_layers: 4
+    feedforward_dim: 1024
+    learning_rate: 0.0001
+    batch_size: 16
+    consistency_threshold: 0.5
+
+  curation_threshold: 0.5

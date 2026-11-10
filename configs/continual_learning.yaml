@@ -1,0 +1,63 @@
+# Configuration defaults matching training/continual_learning.py.
+
+model:
+  model_name_or_path: 01-ai/Yi-6B-200K
+
+data:
+  narrative_train: data/continual/narrative_train.jsonl
+  retention_train: data/continual/retention_train.jsonl
+  narrative_eval: data/continual/narrative_eval.jsonl
+  retention_eval: data/continual/retention_eval.jsonl
+
+output_dir: outputs/continual_learning
+
+sequence:
+  max_seq_length: 2048
+  prompt_template: |
+    ### Instruction:
+    {prompt}
+
+    ### Response:
+
+optimization:
+  learning_rate: 0.0002
+  batch_size: 1
+  gradient_accumulation_steps: 16
+  epochs_per_round: 1
+  max_rounds: 10
+  warmup_ratio: 0.03
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+
+replay:
+  initial_ratio: 0.25
+  min_ratio: 0.05
+  max_ratio: 0.80
+  ratio_step: 0.05
+
+metrics_and_convergence:
+  max_capability_deviation: 0.05
+  min_plasticity: 0.05
+  min_stability: 0.90
+  stability_scale: 0.05
+  convergence_patience: 2
+
+lora:
+  rank: 16
+  alpha: 32
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+    - gate_proj
+    - up_proj
+    - down_proj
+
+runtime:
+  precision: auto
+  load_in_4bit: false
+  gradient_checkpointing: true
+  device: null
+  seed: 42
