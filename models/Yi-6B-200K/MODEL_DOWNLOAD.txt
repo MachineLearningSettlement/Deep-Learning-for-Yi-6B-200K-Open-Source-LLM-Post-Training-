@@ -1,0 +1,20 @@
+Yi-6B-200K Model Files
+
+The smaller model and configuration files are available directly in this
+GitHub repository.
+
+The four large model weight files are hosted on Google Drive because
+they exceed GitHub’s standard web-upload limit. They are provided there
+as ZIP archives:
+
+-   model-00001-of-00002
+-   model-00002-of-00002
+-   pytorch_model-00001-of-00002
+-   pytorch_model-00002-of-00002
+
+Google Drive folder:
+https://drive.google.com/drive/folders/14YjbrLX_7FHNMCIWnI1SMv4p15byXMP8?usp=sharing
+
+Download the four archives from Google Drive and extract them into the
+models/Yi-6B-200K/ directory alongside the files available in this
+repository.
